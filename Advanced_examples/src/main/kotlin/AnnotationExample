@@ -1,0 +1,10 @@
+fun main(args: Array<String>) {
+    println("This is example of kotlin annotation")
+    println("the sum of ${sum(10, 7)}")
+}
+class Item(
+    @Positive val amount: Float,
+    @AllowedNames(["Alice", "Bob"]) val name: String) {
+    annotation class AllowedNames(val name: Array<String>)
+    annotation class Positive
+}
